@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body.light {
+  --bg-color: rgb(204, 154, 251);
+  --primary-color: blueviolet;
+  --secondary-color: #fff;
+  --terciary-color: #000;
+}
+
+body.dark {
+  --bg-color: #000;
+  --primary-color: blueviolet;
+  --secondary-color: #fff;
+  --terciary-color: #fff;
+}
+
+body {
+  background-color: var(--bg-color);
+  transition: 0.8s;
+}
+
+#container {
+  text-align: center;
+  width: 300px;
+  margin: 40px auto;
+}
+
+img {
+  width: 100%;
+  border-radius: 50%;
+  width: 140px;
+  border: 8px solid var(--primary-color);
+  transform: rotate(28deg);
+}
+
+h1 {
+  margin-top: 24px;
+  margin-bottom: 8px;
+  color: var(--terciary-color);
+}
+
+p {
+  color: var(--terciary-color);
+}
+
+.boxToggle {
+  margin-inline: auto;
+  margin-top: 16px;
+  width: 80px;
+  height: 40px;
+  border-radius: 24px;
+  background-color: var(--primary-color);
+}
+
+.btnToggleTheme {
+  width: 50%;
+  height: 100%;
+  border-radius: 50%;
+  border: none;
+  transition: transform 0.5s;
+  background-color: rgb(255, 0, 230);
+  opacity: 0.8;
+}
+
+body.light #container .boxToggle .btnToggleTheme {
+  transform: translateX(-50%);
+}
+
+body.dark #container .boxToggle .btnToggleTheme {
+  transform: translateX(50%);
+}
+
+ul {
+  list-style: none;
+  margin: 24px 0;
+  gap: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 53px;
+  background-color: var(--primary-color);
+  border-radius: 6px;
+  color: var(--secondary-color);
+  text-decoration: none;
+  transition: filter 0.2s;
+}
+
+ul li a:hover {
+  filter: brightness(0.8);
+}
+
+footer {
+  color: var(--terciary-color);
+}
